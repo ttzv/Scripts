@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <p>
+      Some errors occured during sync:
+    </p>
+    <table style="border: 1px solid black; border-collapse: collapse;">
+      <thead>
+        <tr>
+          <th style="border: 1px solid black;">#</td>
+          <th style="border: 1px solid black;">User</td>
+          <th style="border: 1px solid black;">Error Message</td>
+        </tr>
+      </thead>
+      <tbody>
+        <? errors.forEach((error, index) => { ?>
+          <tr>
+            <td style="border: 1px solid black;"><?= index+1 ?></td>
+            <td style="border: 1px solid black;"><?= error.userKey ?></td>
+            <td style="border: 1px solid black;"><?= error.message ?></td>
+          </tr>
+        <? }) ?>
+      </tbody>
+    </table>
+  </body>
+</html>
