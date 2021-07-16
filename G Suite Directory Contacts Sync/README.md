@@ -21,18 +21,17 @@ All configurable parameters can be found in Configuration.gs file.
 ## How to configure columns
 Column to Directory mapping is stored in Column object where keys are Directory attributes and values correspond to column order number. 
 
-I plan to implement some sort of validation between column names (text values in first row) and column ordering. The idea would be to compare text value in the worksheet to the value in ColumnId object, something along the lines of:
-
+I plan to implement some sort of validation between column names (text values in first row) and column ordering. The idea would be to compare text value in the worksheet to the value in ColumnId object, something along the lines of:  
 `getHeading().getCell(0, Column.city).getValue() == ColumnId.city`
 
 # How to run it
-Create a new Google Apps Script project: [My Projects](https://script.google.com/u/0/home/my)
-Copy everything from:
-`SirectoryUpdate.gs`
-`SheetParse.gs`
-`logs.html`
-`unaccent.gs`
-`Configuration.gs`
+Create a new Google Apps Script project: [My Projects](https://script.google.com/u/0/home/my)  
+Copy everything from:  
+`DirectoryUpdate.gs`  
+`SheetParse.gs`  
+`logs.html`  
+`unaccent.gs`  
+`Configuration.gs`  
 to corresponding files.
 
 Configure the script to your needs in Configuration.gs file.
