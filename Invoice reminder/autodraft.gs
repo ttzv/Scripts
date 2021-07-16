@@ -89,7 +89,7 @@ function createDraft(recipients, subject, htmlBody){
 function sendEmail(recipients, subject, htmlBody){
   GmailApp.sendEmail(recipients.join(','), subject, '',{
     htmlBody: htmlBody,
-    cc: 'aleksandra.michalska@atal.pl'
+    cc: ccMails.join(',')
   });
 }
 
@@ -101,7 +101,7 @@ function createEmailsFromRecipients(data){
   var recipientArr = data.recipients.split(', ');
   return recipientArr.map(function(r){
     var splitRec = unaccent(r).toLowerCase().split(' ');
-    return splitRec[1] + '.' + splitRec[0] + '@atal.pl';
+    return splitRec[1] + '.' + splitRec[0] + domain;
   });
 }
 

@@ -26,7 +26,7 @@ function getHeading(){
 
 function test(){
   let data = getSheetUserInfo();
-  let userUpdate = findUser(data, "test.user@yourdomain.com");
+  let userUpdate = findUser(data, testEmail);
   Logger.log(userUpdate);
   let userKey = userUpdate.userKey; 
   delete userUpdate.userKey

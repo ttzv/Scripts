@@ -1,10 +1,8 @@
 var ss = SpreadsheetApp.getActiveSpreadsheet();
 var ui = SpreadsheetApp.getUi();
-var configSheetName = 'Szablon';
-var dataSheetName = 'Dane';
 var dataSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(dataSheetName);
 var config = null;
-var startMsg = 'Po naciśnięciu OK rozpocznie się wykonywanie skryptu które może zająć nawet kilkadziesiąt minut. NIE wprowadzaj zmian w arkuszu. Możesz zminimalizować przeglądarkę lub przejść do innej karty. Zakończenie wykonywania skryptu zostanie zasygnalizowane komunikatem.';
+var startMsg = "Pressing OK will start script execution which, depending on dataset volume, may take a long time. Please DO NOT make any changes in the worksheet during execution. You can minimize the browser or change tabs. You will be notified when script finishes execution.";
 
 function initConfig(){
   var configSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(configSheetName);
@@ -14,6 +12,7 @@ function initConfig(){
   var recipient = configValues[2][1]; 
   var columns = configValues[3][1].split('\n').filter(Boolean);
   var ignoredMails = configValues[4][1].split('\n').filter(Boolean);
+  var ccMails = configValues[5][1].split('\n').filter(Boolean);
   return {
     topic: subject,
     template: template,

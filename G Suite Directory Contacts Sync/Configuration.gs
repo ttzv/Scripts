@@ -34,6 +34,6 @@ const ColumnId = {
 // Email addresses
 const domain = 'yourdomain.com';
 const infoEmail = 'infoEmail@yourdomain.com';
-
+const testEmail = 'testEmail@yourdomain.com';
 
 
